@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "syri2jbrowse"
+dynamic = ["version"]
+description = "View SyRI's structural rearrangements between genomes in JBrowse 2"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.9"
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.scripts]
+syri2jbrowse = "syri2jbrowse:main"
+
+[tool.hatch.version]
+path = "src/syri2jbrowse/__init__.py"
