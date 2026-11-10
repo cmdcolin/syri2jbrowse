@@ -208,7 +208,6 @@ def config(names, colors, lane_pairs, has_regions, min_size):
         synteny_track['displays'] = [
             {
                 'type': 'MultiWaySyntenyDisplay',
-                'displayId': 'syri-MultiWaySyntenyDisplay',
                 'rows': {'sort': names[1:]},
                 'ribbons': {'encoding': {'color': syri_color, 'opacity': 0.7}},
             }
@@ -225,11 +224,11 @@ def config(names, colors, lane_pairs, has_regions, min_size):
                     'type': 'BedAdapter',
                     'uri': 'syri_regions.bed',
                     'columnNames': BED_COLUMNS,
+                    'disableGeneHeuristic': True,
                 },
                 'displays': [
                     {
                         'type': 'LinearMultiRowFeatureDisplay',
-                        'displayId': f'syri_regions_on_{reference}-LinearMultiRowFeatureDisplay',
                         'rows': {'field': 'query', 'sort': names[1:]},
                         'encoding': {
                             'color': {
