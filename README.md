@@ -13,7 +13,7 @@ changing its name.
 ## Install
 
 ```bash
-pip install syri2jbrowse
+pip install git+https://github.com/cmdcolin/syri2jbrowse
 ```
 
 It needs nothing but Python 3.9 or later.
